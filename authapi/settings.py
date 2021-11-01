@@ -84,6 +84,10 @@ DATABASES = {
     }
 }
 
+DJOSER = {
+    'LOGIN_FIELD': 'email'
+}
+
 
 # Rest Framework  Configuration
 REST_FRAMEWORK = {
