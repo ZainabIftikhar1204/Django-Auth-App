@@ -84,8 +84,16 @@ DATABASES = {
     }
 }
 
+AUTH_USER_MODEL = 'authapp.Users'  # to go to auth app and find a User model in it
+
 DJOSER = {
-    'LOGIN_FIELD': 'email'
+    'LOGIN_FIELD': 'email',
+    'USER_CREATE_PASSWORD_RETYPE': True,  # to ask the user for pwd twice
+    'SERIALIZERS': {
+        'user_create': 'authapp.serializers.UserCreateSerializer',
+        'user': 'authapp.serializers.UserCreateSerializer'
+
+    }
 }
 
 
